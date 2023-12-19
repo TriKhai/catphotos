@@ -3,9 +3,107 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>CatPhotoApp</title>
     </head>
     <body>
-        <h1>CatPhotoApp</h1>
+        <!-- xác định phần chính của code bằng main-->
+        <main>
+            <!-- h1->h6 tiêu đề -->
+            <h1>CatPhotoApp</h1>
+
+            <!-- section để tách nội dung ra để dễ xử lí về sau -->
+            <section>
+                <h2>Cat Photos</h2>
+                <!-- p thẻ chứa nội dung -->
+                <!-- //deleted <p>See more cat photos in our gallery</p> -->
+                
+                <!-- TODO: Add link to cat photos đây là comments-->
+                <!--  -->
+
+                <!-- img là để chèn ảnh vào -->
+                <!-- src là link ảnh / ảnh lưu ở file cũng đc luôn -->
+                <!-- alt là text khi mà load ảnh bị failed -->
+                <!-- deleted <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="cat picture"> -->
+            
+                <!-- thẻ a dùng để link -->
+                <!-- href là link đó -->
+                <!-- //deleted <a href="https://freecatphotoapp.com">link to cat pictures</a> -->
+
+                <!-- có thể để anchor vào thẻ p như này -->
+                <p>See more <a target="_blank" href="https://freecatphotoapp.com"> cat pictures</a>in our gallery</p>
+
+                <!-- có thể dùng anchor vào thẻ img -->
+                <a href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="cat picture"></a>
+            </section>
+            
+            <section>
+                <h2>Cat List</h2>
+                <h3>Things cats love:</h3>
+                <!-- ul là danh sách unordered-->
+                <ul>
+                    <!-- li là các item của danh sách -->
+                    <li>cat nip</li>
+                    <li>laser pointers</li>
+                    <li>lasagna</li>
+                </ul>
+
+                <!-- figure liên hết hình ảnh với chú thích -->
+                <figure>
+                    <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+                    <!-- figcaption chú thích hình ảnh -->
+                    <!-- em nhấn mạnh từ -->
+                    <figcaption>Cats <em>love</em> lasagna.</figcaption>
+                </figure>
+
+                <h3>Top 3 things cats hate:</h3>
+                <!-- ol là danh sách ordered -->
+                <ol>
+                    <li>flea treatment</li>
+                    <li>thunder</li>
+                    <li>other cats</li>
+                </ol>
+
+                <figure>
+                    <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
+                    <figcaption>Cats <strong>hate</strong> other cats</figcaption>
+                </figure>
+            </section>
+
+            <section>
+                <h2>Cat Form</h2>
+                <!-- form tạo form với dữ liệu đc đưa tới path của action -->
+                <form action="https://freecatphotoapp.com/submit-cat-photo"></form>
+               
+                <!-- input nhận dữ liệu vào -->
+                <!-- type là loại input -->
+                <!-- name giúp xác định tên của dữ liệu khi chuyển đến server -->
+                <!-- placehoder là dòng chữ tạm thời khi chưa nhập gì -->
+                <!-- required bắt buộc nhập thông tin -->
+                <!-- label và input liên kết nhau không chỉ nhấp vào radio mà còn nhấp vào text-->
+                <!-- name của 2 cái input trùng nhau giúp chỉ chọn 1 trong 2 -->
+                <!-- value giúp xác định khi chọn nút nào -->
+                <!-- fieldset giúp nhóm label và input có liên quan lại với nhau -->
+                <fieldset>
+                    <!-- legend giống như là chú thích của fieldset -->
+                    <legend>Is your cat an indoor or outdoor cat?</legend>
+                    <label><input checked value="indoor" id="indoor" type="radio" name="indoor-outdoor"> Indoor</label>
+                    <label><input value="outdoor" id="outdoor" type="radio" name="indoor-outdoor"> Outdoor</label>
+                </fieldset>
+                <fieldset>
+                    <legend>What's your cat's personality?</legend>
+                    <!-- cách liên kết khác giữa text và input nè -->
+                    <!-- checked vùa gióng requied vừ giống placehoder, lưu ý chỉ gắn vào 1 input trong các input trùng tên -->
+                    <input checked value="loving" type="checkbox" name="personality" id="loving"> <label for="loving">Loving</label>
+                    <input value="lazy" type="checkbox" name="personality" id="lazy"> <label for="lazy">Lazy</label>
+                    <input value="energetic" type="checkbox" name="personality" id="energetic"> <label for="energetic">Energetic</label>
+                </fieldset>
+                <input required type="text" name="catphotourl" placeholder="cat photo URL">
+                <!-- button là cái nút nhấn, button là inline elements tức là không xuất hiện dòng mới -->
+                <button type="submit">Submit</button>
+            </section>
+        </main>
+        <footer>
+            <p>No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a></p>
+        </footer>
     </body>
     </html>
